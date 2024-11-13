@@ -1,0 +1,124 @@
+/*  Small devices (landscape phones, 576px and up) */
+@media screen and (max-width: 576px) { 
+    /* SHARED STYLE */
+    html{
+        font-size: 15px;
+    }
+    .bg-img[id*="a-"],  .bg-img[id="contact"]{
+        background-attachment: scroll;
+    }
+    #contact .container, #about .container {
+        width: 94%;
+    }
+    /* HEADER STYLE */
+    .home .h1{
+        font-size: 3.25rem;
+    }
+    header .navbar-nav .nav-item a::after{
+        left: 0;
+        width: 1%;
+        transition: all 0.3s ease-in-out;
+    }
+    header .navbar-nav .nav-item:hover a::after{
+        width: 7%;
+    }
+
+    /* ABOUT */
+    #about .p-sm{
+        padding: 4.3rem 2rem;
+    }
+    #about .special-row{
+        transform: translateX(-4px);
+    }
+    #about .row>* .special {
+        padding-left: 0;
+    }
+    /* SERVICES */
+    #services .container{
+        width: 98%;
+    }
+    #services .card-text{
+        padding: 0 1.5rem;
+    }
+
+    /*SECTION AFTER THE SERVICES SECTION STYLE */
+   .height-class{
+    padding: 5rem 0;
+   }
+   .services-item{
+    padding: 0.8rem 0;
+   }
+    .sect-content{
+        padding: 1rem 0;
+    }
+    #a-services .sect-content p {
+        font-size: 2.25rem;
+    }
+  
+    /* SECTION AFTER THE WORK SECTION  */
+    #a-work p.description{
+        padding: 0 4rem;
+    }
+
+    /* BLOG STYLE */
+    #blog .card .card-body{
+        padding: 2.25rem;
+    }
+
+    /* CONTACT AND FOOTER SECTION */
+    .h5{
+        padding-top: 30px;
+    }
+    footer{
+        margin-top: -70px
+    }
+ }
+
+ @media (min-width: 577px) { 
+    /* SHARED */
+    .container{
+        width: 73%;
+    }
+    /* HEADER */
+    .h1 {
+        font-size: 2.85rem;
+    }
+    /* AFTER WORK */
+    #a-work .description {
+        padding: 0 5.1rem;
+    }
+    /* SERVICES */
+    #services .card-text{
+        padding: 0 1rem;
+    }
+    /* CONTACT */
+    .h5{
+        padding-top: 11px;
+    }
+ }
+/*  Medium devices (tablets, 768px and up) */
+@media (min-width: 768px) { 
+    /* SHARED */
+    html{
+        font-size: 16px;
+    }
+    .container{
+        width: 100%;
+    }
+    /* HEADER */
+    .h1{
+        font-size: 4.5rem;
+    }
+    /* AFTER WORK */
+    #a-work .description {
+        padding: 0 19.1rem;
+    }
+    /* SERVICES */
+    #services .card-text{
+        padding: 0;
+    }
+    /* CONTACT */
+    #contact .container{
+        width: 82%;
+    }
+}

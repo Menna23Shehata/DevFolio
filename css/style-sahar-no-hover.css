@@ -1,0 +1,794 @@
+/* START OF THE SHARED STYLE */
+:root {
+  --main-color: #0078ff;
+  --black-color: #1e1e1e;
+  --grey-color: #4e4e4e;
+  --white-color: #fff;
+  --shadow-color: #cde1f8;
+}
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+body {
+  background-color: #f5f5f5;
+  /* font-family: 'Roboto', sans-serif; */
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji",
+    "Segoe UI Symbol", "Noto Color Emoji";
+  color: var(--grey-color);
+  overflow: hidden;
+}
+h2,
+h3,
+h6,
+h5 {
+  color: var(--black-color);
+  margin-bottom: 0.5rem;
+  font-family: inherit;
+  font-weight: 500;
+  line-height: 1.2;
+  margin-top: 0;
+}
+p {
+  color: var(--grey-color);
+}
+a {
+  color: var(--black-color);
+  transition: all 0.5s ease-in-out;
+}
+ul li {
+  list-style-type: none;
+}
+ul {
+  padding-left: 0;
+}
+.header {
+  margin-bottom: 4rem;
+}
+.h3 {
+  font-size: 3rem;
+  color: var(--black-color);
+}
+.line {
+  width: 40px;
+  height: 5px;
+  background-color: var(--main-color);
+  margin: 0 auto;
+}
+.box-shadow {
+  box-shadow: 0 13px 8px -10px rgb(0 0 0 / 10%);
+}
+.bg-img {
+  background-position: center center;
+  background-size: cover;
+  background-attachment: fixed;
+}
+.bg-color {
+  background-color: rgba(0, 120, 255, 0.7);
+}
+.h5 {
+  font-size: 2rem;
+  position: relative;
+  margin-bottom: 48px;
+}
+.h5::after {
+  content: "";
+  position: absolute;
+  height: 3px;
+  background-color: var(--main-color);
+  width: 100px;
+  bottom: -12px;
+  left: 0;
+}
+/* END OF THE SHARED STYLE */
+
+/* START OF THE LOADER */
+#loading {
+  background-color: #333;
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 9999;
+}
+.lds-circle {
+  display: inline-block;
+  transform: translateZ(1px);
+}
+.lds-circle > div {
+  display: inline-block;
+  width: 64px;
+  height: 64px;
+  margin: 8px;
+  border-radius: 50%;
+  background: #fff;
+  animation: lds-circle 2.4s cubic-bezier(0, 0.2, 0.8, 1) infinite;
+}
+
+@keyframes lds-circle {
+  0%,
+  100% {
+    animation-timing-function: cubic-bezier(0.5, 0, 1, 0.5);
+  }
+  0% {
+    transform: rotateY(0deg);
+  }
+  50% {
+    transform: rotateY(1800deg);
+    animation-timing-function: cubic-bezier(0, 0.5, 0.5, 1);
+  }
+  100% {
+    transform: rotateY(3600deg);
+  }
+}
+
+/* END OF THE LOADER */
+
+/* START OF THE HEADER */
+.header-opacity {
+  background-color: rgba(0, 0, 0, 0.5);
+}
+.navbar {
+  transition: background-color 2s;
+}
+.nav-height {
+  transition: all 0.5s ease-in-out;
+  padding-top: 15px;
+  padding-bottom: 15px;
+  box-shadow: 0px 6px 9px 0px rgb(0 0 0 / 6%);
+}
+.navbar-brand {
+  font-size: 1.6rem;
+  font-weight: 600;
+}
+.nav-item {
+  font-weight: 600;
+  padding: 0 0.65rem;
+}
+
+/* .navbar-brand, .nav-link{
+    color: white;
+} */
+/*?????? l active 7alto l nfsya s3ba ????/*/
+header .nav-item a,
+nav .active {
+  position: relative;
+}
+
+/* By Eng. Sahar */
+header .nav-item .active::after {
+  content: "";
+  position: absolute;
+  transition: all 0.5s ease-in-out;
+  width: 20%;
+  left: calc((100% - 20%) / 2);
+  bottom: 0;
+  height: 2px;
+  background-color: var(--main-color);
+}
+
+/* By Eng. Sahar */
+/* header .nav-item:hover a::after,nav .active{
+    width: 50%;
+    background-color: var(--main-color);
+} */
+
+.home {
+  background-image: url(../imgs/intro-bg.jpg);
+  background-attachment: fixed;
+}
+header p::after {
+  content: "|";
+  animation-name: typing;
+  animation-duration: 11s;
+  animation-iteration-count: infinite;
+}
+@keyframes typing {
+  0% {
+    content: "F |";
+  }
+  1% {
+    content: "Fr |";
+  }
+  2% {
+    content: "Fro |";
+  }
+  3% {
+    content: "Fron |";
+  }
+  4% {
+    content: "Front |";
+  }
+  5% {
+    content: "Fronte |";
+  }
+  6% {
+    content: "Fronten |";
+  }
+  7% {
+    content: "Frontend |";
+  }
+  8% {
+    content: "Frontend  |";
+  }
+  9% {
+    content: "Frontend D |";
+  }
+  10% {
+    content: "Frontend De |";
+  }
+  11% {
+    content: "Frontend Dev |";
+  }
+  12% {
+    content: "Frontend Deve |";
+  }
+  13% {
+    content: "Frontend Devel |";
+  }
+  14% {
+    content: "Frontend Develo |";
+  }
+  15% {
+    content: "Frontend Develop |";
+  }
+  16% {
+    content: "Frontend Develope |";
+  }
+  17% {
+    content: "Frontend Developer |";
+  }
+  18% {
+    content: "Frontend Develope |";
+  }
+  19% {
+    content: "Frontend Develop |";
+  }
+  20% {
+    content: "Frontend Develo |";
+  }
+  21% {
+    content: "Frontend Devel |";
+  }
+  22% {
+    content: "Frontend Deve |";
+  }
+  23% {
+    content: "Frontend Dev |";
+  }
+  24% {
+    content: "Frontend De |";
+  }
+  25% {
+    content: "Frontend D |";
+  }
+  26% {
+    content: "Frontend  |";
+  }
+  27% {
+    content: "Fronten |";
+  }
+  28% {
+    content: "Fronte |";
+  }
+  29% {
+    content: "Front |";
+  }
+  30% {
+    content: "Fron |";
+  }
+  31% {
+    content: "Fro |";
+  }
+  32% {
+    content: "Fr |";
+  }
+  33% {
+    content: "F |";
+  }
+  34% {
+    content: "W |";
+  }
+  35% {
+    content: "We |";
+  }
+  36% {
+    content: "Web |";
+  }
+  37% {
+    content: "Web  |";
+  }
+  38% {
+    content: "Web D |";
+  }
+  39% {
+    content: "Web De |";
+  }
+  40% {
+    content: "Web Des |";
+  }
+  41% {
+    content: "Web Desi |";
+  }
+  42% {
+    content: "Web Desig |";
+  }
+  43% {
+    content: "Web Design |";
+  }
+  44% {
+    content: "Web Designe |";
+  }
+  45% {
+    content: "Web Designer |";
+  }
+  46% {
+    content: "Web Designe |";
+  }
+  47% {
+    content: "Web Design |";
+  }
+  48% {
+    content: "Web Desig |";
+  }
+  49% {
+    content: "Web Desi |";
+  }
+  50% {
+    content: "Web Des |";
+  }
+  51% {
+    content: "Web De |";
+  }
+  52% {
+    content: "Web Dev |";
+  }
+  53% {
+    content: "Web Deve |";
+  }
+  54% {
+    content: "Web Devel |";
+  }
+  55% {
+    content: "Web Develo |";
+  }
+  56% {
+    content: "Web Develop |";
+  }
+  57% {
+    content: "Web Develope |";
+  }
+  58% {
+    content: "Web Developer |";
+  }
+  59% {
+    content: "Web Develope |";
+  }
+  60% {
+    content: "Web Develop |";
+  }
+  61% {
+    content: "Web Develo |";
+  }
+  62% {
+    content: "Web Devel |";
+  }
+  63% {
+    content: "Web Deve |";
+  }
+  64% {
+    content: "Web Dev |";
+  }
+  65% {
+    content: "Web De |";
+  }
+  66% {
+    content: "Web D |";
+  }
+  67% {
+    content: "Web  |";
+  }
+  68% {
+    content: "Web |";
+  }
+  69% {
+    content: "We |";
+  }
+  70% {
+    content: "W |";
+  }
+  71% {
+    content: "Gra |";
+  }
+  72% {
+    content: "Graphi |";
+  }
+  73% {
+    content: "Graphic D |";
+  }
+  74% {
+    content: "Graphic Desi |";
+  }
+  75% {
+    content: "Graphic Designer |";
+  }
+  76% {
+    content: "Graphic Desig |";
+  }
+  77% {
+    content: "Graphic Des |";
+  }
+  78% {
+    content: "Graphic D |";
+  }
+  79% {
+    content: "Graphi |";
+  }
+  80% {
+    content: "Grap |";
+  }
+  81% {
+    content: "Gra |";
+  }
+  82% {
+    content: "G |";
+  }
+  83% {
+    content: "CE |";
+  }
+  84% {
+    content: "CEO |";
+  }
+  85% {
+    content: "CEO Dev |";
+  }
+  86% {
+    content: "CEO DevFol |";
+  }
+  87% {
+    content: "CEO DevFolio |";
+  }
+  88% {
+    content: "CEO DevFol |";
+  }
+  89% {
+    content: "CEO DevFo |";
+  }
+  90% {
+    content: "CEO DevF |";
+  }
+  91% {
+    content: "CEO Dev |";
+  }
+  92% {
+    content: "CEO De |";
+  }
+  93% {
+    content: "CEO D |";
+  }
+  94% {
+    content: "CEO |";
+  }
+  95% {
+    content: "CE |";
+  }
+  96% {
+    content: "CE |";
+  }
+  97% {
+    content: "C |";
+  }
+  100% {
+    content: "|";
+  }
+}
+.header-content {
+  height: inherit;
+}
+.h1 {
+  font-weight: 600;
+}
+.moving-text {
+  font-size: 2.5rem;
+  font-weight: 300;
+}
+/* END OF THE HEADER */
+
+/* START OF THE ABOUT SECTION */
+#about img {
+  margin-bottom: 2rem;
+  margin-left: 10px;
+}
+.ul-padding,
+#about img {
+  padding: 0 15px;
+}
+.title,
+#about ul li span {
+  font-weight: 600;
+  color: var(--black-color);
+  font-size: 1.1rem;
+}
+#about ul li {
+  margin-bottom: 1rem;
+}
+.all-progress p {
+  margin-bottom: 0.2rem;
+}
+.all-progress p,
+.all-progress span,
+#about ul li p {
+  color: var(--grey-color);
+}
+.all-progress .progress {
+  background-color: var(--shadow-color);
+  margin: 0.5rem 0 1.2rem 0;
+  border-radius: 0;
+  height: 0.7rem;
+}
+
+/* END OF THE ABOUT SECTION */
+
+/* START OF THE SERVICES STYLE */
+#services .card {
+  padding: 2.5rem 1.3rem;
+}
+#services .card-body {
+  padding: 0;
+}
+#services .card-title {
+  font-size: 1.4rem;
+  padding: 0.4rem 0;
+  color: var(--black-color);
+}
+.card .icon {
+  color: var(--black-color);
+}
+.card .service-icon {
+  transition: all 500ms ease;
+  font-size: 4rem;
+}
+.service-icon {
+  height: 100px;
+  width: 100px;
+  line-height: 1.55;
+  box-shadow: 0 0 0 10px var(--main-color);
+}
+.card:hover .service-icon {
+  background-color: var(--main-color);
+  box-shadow: 0 0 0 10px var(--shadow-color);
+  color: var(--white-color);
+}
+
+/* END OF THE SERVICES STYLE */
+
+/* START OF THE SECTION AFTER THE SERVICES SECTION STYLE*/
+section[id="a-services"] {
+  background-image: url(../imgs/counters-bg.jpg);
+}
+.height-class {
+  height: inherit;
+  margin: 50px auto;
+}
+.sect-icon {
+  height: inherit;
+}
+.sect-icon .icon-class {
+  height: 60px;
+  width: 60px;
+  font-size: 2rem;
+  line-height: 1.8;
+  box-shadow: 0 0 0 10px var(--shadow-color);
+}
+.sect-content p {
+  color: var(--white-color);
+  font-size: 2rem;
+  margin-bottom: 0;
+}
+#a-services .sect-content span {
+  letter-spacing: 1px;
+}
+/* END OF THE SECTION AFTER THE SERVICES SECTION STYLE */
+
+/* START OF THE WORK STYLE */
+#work {
+  padding-top: 5rem;
+}
+.work-img img {
+  transition: transform 1s;
+  width: 100%;
+}
+#work .card:hover .work-img img {
+  transform: scale(1.3);
+}
+#work .card-body {
+  padding: 2rem 3% 1rem 4%;
+}
+.w-title {
+  font-size: 1.2rem;
+}
+.left-word,
+.right-word {
+  font-size: 0.8rem;
+}
+.left-word {
+  color: var(--main-color);
+}
+.right-word {
+  color: var(--grey-color);
+}
+
+#work .plus i {
+  color: var(--main-color);
+  font-size: 2.5rem;
+}
+/* END OF THE WORK STYLE */
+
+/* START OF THE BLOG STYLE */
+.avatar {
+  width: 32px;
+  height: 32px;
+  margin-right: 4px;
+}
+.post-date,
+.post-date i {
+  color: var(--grey-color);
+}
+#blog .card-category-box {
+  top: -16px;
+  left: 15px;
+  right: 15px;
+  line-height: 25px;
+}
+#blog .card-category {
+  padding: 0 15px 5px;
+  background-color: var(--main-color);
+  border-radius: 4px;
+}
+#blog .card-category .category {
+  font-size: 0.7rem;
+  letter-spacing: 0.1px;
+}
+#blog .card-title {
+  font-size: 1.3rem;
+  margin-top: 0.6rem;
+}
+#blog .card-body {
+  padding: 1.5rem;
+}
+#blog a:hover {
+  color: var(--main-color);
+}
+/* END OF THE BLOG STYLE */
+
+/* START OF THE SECTION AFTER THE WORK SECTION STYLE*/
+section[id="a-work"] {
+  background-image: url(../imgs/overlay-bg.jpg);
+  height: 92vh;
+}
+
+.comit {
+  font-size: 2.25rem;
+  color: var(--main-color);
+  width: 52px;
+  height: 52px;
+  line-height: 1.6;
+}
+#a-work .author {
+  margin: 1rem 0;
+  font-size: 1.4rem;
+}
+
+/* END OF THE SECTION AFTER THE WORK SECTION STYLE */
+
+/* START OF THE CONTACT AND FOOTER SECTION */
+
+section[id="contact"] {
+  background-image: url(../imgs/overlay-bg.jpg);
+  height: fit-content;
+}
+
+.border-radius {
+  border-radius: 5rem;
+}
+.btn-style {
+  padding: 0.9rem 2.3rem;
+  font-size: 1.2rem;
+}
+.btn-style:hover {
+  background-color: #0062d3;
+  color: var(--white-color);
+  transition: all 500ms ease;
+}
+.btn-style:hover {
+  box-shadow: 0 0 0 4px var(--shadow-color);
+}
+.contact-details {
+  line-height: 2;
+}
+.contact-details span {
+  color: var(--main-color);
+  margin-right: 10px;
+}
+
+.social-media {
+  padding: 1.5rem 0;
+}
+.social-media li {
+  margin-right: 15px;
+}
+a.social-media {
+  color: var(--black-color);
+  transition: all 0.5s ease-in-out;
+}
+.social-media .circle {
+  height: 40px;
+  width: 40px;
+  font-size: 1.7rem;
+  line-height: 1.4;
+  margin: 0 15px 0 0;
+  box-shadow: 0 0 0 3px var(--main-color);
+  transition: all 500ms ease;
+}
+.social-media .circle:hover {
+  background-color: var(--main-color);
+  box-shadow: 0 0 0 3px var(--shadow-color);
+  transition: all 500ms ease;
+}
+.social-media .circle:hover a {
+  color: var(--white-color);
+}
+
+.centered {
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.contact {
+  padding: 0 15px;
+}
+
+/* FOOTER */
+footer {
+  padding-bottom: 3rem;
+}
+footer a,
+footer p {
+  color: var(--white-color);
+}
+footer .copyright {
+  margin-bottom: 0.3rem;
+}
+/* END OF THE CONTACT AND FOOTER SECTION */
+
+/* START OF SPECIAL ICONS */
+/* .back-to-top{
+    padding-top: 12px;
+    display: none;
+}
+.bi-chevron-up {
+    position: fixed;
+    background-color: var(--main-color);
+    width: 2.75rem;
+    height: 2.75rem;
+    line-height: 2.6;
+    right: 15px;
+    bottom: 15px;
+    
+} */
+.back-to-top {
+  display: none;
+  background-color: var(--main-color);
+  right: 15px;
+  bottom: 15px;
+  transition: all 0.5s;
+}
+.back-to-top:hover {
+  background-color: var(--main-color) !important;
+  box-shadow: 0px 0px 10px 4px #86888b;
+}
+/* END OF SPECIAL ICONS */
